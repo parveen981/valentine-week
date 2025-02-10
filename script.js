@@ -23,7 +23,7 @@ function showDay(day) {
     let title = document.getElementById("message-title");
     let text = document.getElementById("message-text");
 
-    let messages = {
+    const messages = {
         'rose': ["🌹 Happy Rose Day!", `Just like a rose, our love is beautiful and forever fresh, ${name}!`],
         'propose': ["💍 Propose Day!", `If love had a name, it would be YOU. Stay with me always, ${name}!`],
         'chocolate': ["🍫 Chocolate Day!", `Life is sweet, but with you, it's even sweeter, ${name}!`],
@@ -52,7 +52,7 @@ function closeMessage() {
 
 // Function to Create Floating Emojis All Over the Screen
 function createFloatingElements(day) {
-    let symbols = {
+    const symbols = {
         'rose': "🌹",
         'propose': "💍",
         'chocolate': "🍫",
