@@ -2,6 +2,13 @@
 function startExperience() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("name-input").style.display = "block";
+    playBackgroundMusic();
+}
+
+// Function to Play Background Music
+function playBackgroundMusic() {
+    const music = document.getElementById("background-music");
+    music.play();
 }
 
 // Function to Save the Name and Show Main Content
@@ -79,7 +86,7 @@ function createFloatingElements(day) {
 
 // Function to Show the Final Valentine's Day Greeting
 function showFinalValentineGreeting() {
-    document.body.innerHTML = `
+    document.getElementById("main-content").innerHTML = `
         <div class="valentine-final">
             <h1>💖 Happy Valentine's Day, My Love! 💖</h1>
             <p>${localStorage.getItem("gfName")}, you are my everything! ❤️</p>
@@ -91,8 +98,8 @@ function showFinalValentineGreeting() {
 
 // Function to Open the Love Letter Popup
 function openLoveLetter() {
-    document.getElementById("gfNameLetter").innerText = localStorage.getItem("gfName") || "My Love";
     document.getElementById("love-letter-box").style.display = "block";
+    document.getElementById("gfNameLetter").innerText = localStorage.getItem("gfName") || "My Love";
 }
 
 // Function to Close the Love Letter Popup
