@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Week Surprise 💖</title>
+    <title>Valentine's Week Surprise</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div id="intro">
-        <h2>💖 Welcome to Our Love Story 💖</h2>
-        <button onclick="startExperience()">Begin Magic ✨</button>
+        <h1>💖 Welcome My Love 💖</h1>
+        <p class="subtitle">A special journey of love just for you! 🌹</p>
+        <button class="big-button" onclick="startExperience()">Start</button>
     </div>
 
     <div id="name-input" style="display: none;">
-        <h2>Enter Your Name, My Love 💞</h2>
-        <input type="text" id="gfName" placeholder="Your Name">
-        <button onclick="saveName()">Start</button>
+        <h2>Enter Your Name, My Love:</h2>
+        <input type="text" id="gfName" placeholder="Type your name here..." />
+        <button onclick="saveName()">Continue</button>
     </div>
 
     <div id="main-content" style="display: none;">
-        <h1>💝 Valentine's Week Special 💝</h1>
-        <p class="subtitle">For <span id="loveName"></span> ❤️</p>
+        <h1>Welcome, <span id="loveName"></span>! 💕</h1>
         <p id="loveCounter"></p>
 
         <div class="days">
@@ -31,16 +31,39 @@
             <button onclick="showDay('teddy')">🧸 Teddy Day</button>
             <button onclick="showDay('promise')">🤞 Promise Day</button>
             <button onclick="showDay('hug')">🤗 Hug Day</button>
-            <button onclick="showDay('kiss')">💋 Kiss Day</button>
-        </div>
-
-        <div id="content">
-            <h2>Click on a day to see the surprise! 💖</h2>
+            <button onclick="showDay('kiss')">💖 Kiss Day</button>
         </div>
     </div>
 
-    <div id="floating-elements"></div>
+    <div id="message-box" class="hidden">
+        <div class="message-content">
+            <span class="close-btn" onclick="closeMessage()">✖</span>
+            <h2 id="message-title"></h2>
+            <p id="message-text"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
+
+    <!-- Love Letter Popup (Hidden Initially) -->
+    <div id="love-letter-box" class="hidden">
+        <div class="love-letter-content">
+            <span class="close-btn" onclick="closeLoveLetter()">✖</span>
+            <h1>💌 My Love Letter 💌</h1>
+            <p class="letter-text">
+                My Dearest <span id="gfNameLetter"></span>,  
+                <br><br>
+                Every moment with you feels like a beautiful dream.  
+                You are my sunshine on rainy days and my happiness in sadness.  
+                Though life may take us on different paths, my heart will always beat for you.  
+                You are special, and I will cherish you forever!  
+                <br><br>
+                With all my love,  
+                <br>
+                <b>Your Forever Special One 💖</b>
+            </p>
+        </div>
+    </div>
+
 </body>
 </html>

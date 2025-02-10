@@ -1,89 +1,80 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Playfair+Display:wght@500&display=swap');
 
-/* General Styling */
 body {
-    background: linear-gradient(120deg, #ff758c, #ff7eb3); /* Romantic Gradient */
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
     text-align: center;
-    font-family: 'Great Vibes', cursive;
-    color: white;
+    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* Main Titles & Headings */
+/* Headings */
 h1 {
-    color: #fff;
     font-size: 3rem;
-    margin-top: 30px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Sacramento', cursive;
+    margin-top: 20px;
 }
 
 .subtitle {
-    font-size: 1.8rem;
-    color: #ffd1dc;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
 }
 
 /* Buttons */
 button {
     background: #ff4b5c;
     color: white;
-    padding: 12px 25px;
-    font-size: 1.2rem;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 12px 18px;
     margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
     transition: 0.3s;
-    font-family: 'Dancing Script', cursive;
 }
 
 button:hover {
     background: #ff6f91;
-    transform: scale(1.05);
 }
 
-.big-button {
-    font-size: 1.5rem;
-    padding: 15px 30px;
-    border-radius: 10px;
-}
-
-/* Content Box */
-#content {
-    margin-top: 20px;
-    padding: 20px;
-    font-size: 1.5rem;
-    background: white;
-    color: #ff4b5c;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-}
-
-/* Floating Symbols */
-#floating-elements {
+/* Message Box */
+#message-box {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffe6e6;
+    color: #800020;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
+.message-content {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Floating Symbols - Fixed */
 .floating {
     position: absolute;
     font-size: 2rem;
     animation: floatUp 5s linear infinite;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 @keyframes floatUp {
@@ -91,37 +82,69 @@ button:hover {
     to { transform: translateY(-10vh); opacity: 0; }
 }
 
-/* Love Letter */
-.love-letter {
-    background: rgba(255, 182, 193, 0.9);
-    padding: 40px;
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
+/* Love Letter Popup */
+#love-letter-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fffbf2;
     color: #800020;
-    margin: 50px auto;
-    max-width: 600px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 2s ease-in-out;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
-.love-letter h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.love-letter-content {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
 }
 
-.letter-content {
-    font-size: 1.8rem;
+.letter-text {
+    font-size: 1.3rem;
     line-height: 1.5;
 }
 
-.closing {
-    font-size: 2rem;
-    margin-top: 20px;
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: red;
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Valentine's Final Message */
+.valentine-final {
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .message-content {
+        font-size: 1.2rem;
+    }
+
+    .floating {
+        font-size: 1.5rem;
+    }
 }

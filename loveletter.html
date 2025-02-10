@@ -8,21 +8,26 @@
 </head>
 <body>
 
-    <div class="love-letter">
-        <h1>💌 My Dearest <span id="gfName"></span> 💌</h1>
-        <p class="letter-content">
-            From the moment you entered my life, everything changed.  
-            Every day feels magical because of you.  
-            Your smile is my sunshine, your love is my strength.  
-            I want to hold your hand forever and walk this journey with you.  
-            No matter what happens, I will always be by your side,  
-            loving you more with each passing moment.  
-        </p>
-
-        <p class="closing">Forever yours,  
-            <br>❤️ Your Love ❤️</p>
-
-        <button onclick="goBack()">Back to Main Page</button>
+    <div id="love-letter-box">
+        <div class="love-letter-content">
+            <span class="close-btn" onclick="goBack()">✖</span>
+            <h1>💌 My Dearest <span id="gfName"></span> 💌</h1>
+            <p class="letter-text">
+                My love,  
+                <br><br>
+                From the moment you stepped into my life, everything became magical.  
+                Your smile is my sunshine, your voice is my favorite melody,  
+                and your presence makes every day feel like a dream.  
+                Though life may take us on different journeys,  
+                my heart will always beat with love for you.  
+                <br><br>
+                No matter where we go, you will always have a special place in my heart.  
+                <br><br>
+                **Forever cherishing you,**  
+                <br>
+                ❤️ **Your Special One** ❤️
+            </p>
+        </div>
     </div>
 
     <script>
@@ -32,5 +37,6 @@
             window.location.href = "index.html";
         }
     </script>
+
 </body>
 </html>
