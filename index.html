@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Week Surprise 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="intro">
+        <h2>💖 Welcome to Our Love Story 💖</h2>
+        <button onclick="startExperience()">Begin Magic ✨</button>
+    </div>
+
+    <div id="name-input" style="display: none;">
+        <h2>Enter Your Name, My Love 💞</h2>
+        <input type="text" id="gfName" placeholder="Your Name">
+        <button onclick="saveName()">Start</button>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <h1>💝 Valentine's Week Special 💝</h1>
+        <p class="subtitle">For <span id="loveName"></span> ❤️</p>
+        <p id="loveCounter"></p>
+
+        <div class="days">
+            <button onclick="showDay('rose')">🌹 Rose Day</button>
+            <button onclick="showDay('propose')">💍 Propose Day</button>
+            <button onclick="showDay('chocolate')">🍫 Chocolate Day</button>
+            <button onclick="showDay('teddy')">🧸 Teddy Day</button>
+            <button onclick="showDay('promise')">🤞 Promise Day</button>
+            <button onclick="showDay('hug')">🤗 Hug Day</button>
+            <button onclick="showDay('kiss')">💋 Kiss Day</button>
+        </div>
+
+        <div id="content">
+            <h2>Click on a day to see the surprise! 💖</h2>
+        </div>
+    </div>
+
+    <div id="floating-elements"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

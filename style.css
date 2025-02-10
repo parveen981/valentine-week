@@ -1,0 +1,127 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* General Styling */
+body {
+    background: linear-gradient(120deg, #ff758c, #ff7eb3); /* Romantic Gradient */
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Titles & Headings */
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #ffd1dc;
+}
+
+/* Buttons */
+button {
+    background: #ff4b5c;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+    font-family: 'Dancing Script', cursive;
+}
+
+button:hover {
+    background: #ff6f91;
+    transform: scale(1.05);
+}
+
+.big-button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+/* Content Box */
+#content {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.5rem;
+    background: white;
+    color: #ff4b5c;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Floating Symbols */
+#floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatUp 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Love Letter */
+.love-letter {
+    background: rgba(255, 182, 193, 0.9);
+    padding: 40px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #800020;
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.love-letter h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.letter-content {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.closing {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 A Love Letter Just for You 💌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="love-letter">
+        <h1>💌 My Dearest <span id="gfName"></span> 💌</h1>
+        <p class="letter-content">
+            From the moment you entered my life, everything changed.  
+            Every day feels magical because of you.  
+            Your smile is my sunshine, your love is my strength.  
+            I want to hold your hand forever and walk this journey with you.  
+            No matter what happens, I will always be by your side,  
+            loving you more with each passing moment.  
+        </p>
+
+        <p class="closing">Forever yours,  
+            <br>❤️ Your Love ❤️</p>
+
+        <button onclick="goBack()">Back to Main Page</button>
+    </div>
+
+    <script>
+        document.getElementById("gfName").innerText = localStorage.getItem("gfName") || "My Love";
+
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
