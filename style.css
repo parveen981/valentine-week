@@ -39,6 +39,16 @@ button:hover {
     background: #ff6f91;
 }
 
+/* Input Box */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #ff4b5c;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
 /* Message Box */
 #message-box, #love-letter-box {
     position: fixed;
